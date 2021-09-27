@@ -1,0 +1,43 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.headersP{
+    color: #fff;
+}
+
+.selects{
+    position: relative;
+    background-color:  rgba(0, 0, 0, 0.8 );
+    color: #fff;
+    border: thin solid #FFE33D;
+    border-radius: 4px;
+    
+}
+
+.selects option{
+    color: #fff;
+}
+
+.selects:focus{
+    border: 3px solid #FFE33D;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .content{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: colum;
+        justify-content: space-evenly;
+    }
+
+    .headersP{
+      
+    color: #fff;
+}
+    
+}
+

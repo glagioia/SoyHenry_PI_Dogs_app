@@ -1,0 +1,35 @@
+.labelDetail{
+    color: #fff;
+}
+
+.containerDetail{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.imgDetail{
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 5px;
+    
+}
+
+.containerMayor{
+    align-self: center;
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #ffeb77;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.8 );
+}
+
+@media (max-width: 600px){
+    .containerMayor{
+        margin: 50px auto;
+    }
+}

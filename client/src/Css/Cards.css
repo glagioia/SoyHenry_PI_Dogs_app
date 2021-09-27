@@ -1,0 +1,37 @@
+.contentT{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+    
+}
+
+
+.but2{
+    border-radius: 10px;
+    background-color: #FFE33D;
+    color: #000000;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.but2:hover{
+    /* color: #1883ba;
+    background-color: #fff;
+    border: 16px #1883ba; */
+    box-shadow: 0 0 40px #7f711e inset;
+}
+
+.sepBut{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .dobleEspacio:hover{
+    border: 5px;
+    border-color: teal;
+} */
