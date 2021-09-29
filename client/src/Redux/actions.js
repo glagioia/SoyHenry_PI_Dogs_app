@@ -161,20 +161,5 @@ export function ordenamiento_Peso_Desc(){
     }
 }
 
-//despacha la accion años
-export function ordenA(data){
-    return {
-        type: "ORDENA",
-        payload: data
-    }
-}
 
-//Ordenamiento años Desc
-export function ordenamiento_anos(){
-    return async function(dispatch){
-        const result = await axios.get("http://localhost:3001/dogs");
-        const resultsData = result.data;
-        dispatch(ordenA(resultsData));
 
-    }
-}

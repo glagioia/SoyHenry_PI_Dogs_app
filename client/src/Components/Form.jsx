@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { guardaCreado } from '../Redux/actions';
 import { connect } from 'react-redux';
-//import axios from 'axios';
+import axios from 'axios';
 import '../Css/Form.css';
 
 function Form({ temperamentsE, guardaCreado, idG }){
@@ -54,19 +54,22 @@ function Form({ temperamentsE, guardaCreado, idG }){
 
     async function enviar(e, name, añosMin, añosMax, pesoMin, pesoMax, alturaMin, alturaMax, image, selec){
         e.preventDefault();
+        if(!image){
+            image = "https://cdn2.thedogapi.com/images/B1d5me547.jpg";
+        }
         let life_span = `${añosMin} - ${añosMax} years ` ;
         let weight = `${pesoMin} - ${pesoMax}`;
         let height = `${alturaMin} - ${alturaMax}`;
-        // let datos = {
-        //     name,
-        //     life_span,
-        //     weight,
-        //     height,
-        //     image,
-        //     temperaments: selec,
-        // };
+        let datos = {
+            name,
+            life_span,
+            weight,
+            height,
+            image,
+            temperaments: selec,
+        };
         
-        // const crear = await axios.post('http://localhost:3001/dog', datos)
+         await axios.post('http://localhost:3001/dog', datos)
         let datosBG = {
             name,
             life_span,

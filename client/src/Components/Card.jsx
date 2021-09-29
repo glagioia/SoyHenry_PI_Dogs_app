@@ -6,6 +6,8 @@ function Card({image, name, id}){
 
     if(image.url){
         image=image.url
+    }else{
+      
     }
 
     return (

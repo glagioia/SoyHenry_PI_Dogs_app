@@ -36,10 +36,11 @@ function PrincipalRoute({ temperamentsE, cargaTemperaments, filtradoTemperamento
         }else if(e.target.value === "Peso desc"){
             ordenamiento_Peso_Desc();
         }else{
-            
+            ordenamiento_AZ();
         }
     }
 
+    
     return (
         <Fragment>
             <NavBar />

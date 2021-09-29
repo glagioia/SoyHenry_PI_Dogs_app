@@ -91,12 +91,7 @@ export default (state = initial_state, action) => {
                 filtrados: action.payload
             }
 
-        case "ORDENA":
-            //console.log(action.payload)
-            return {
-                ...state,
-                filtrados: action.payload
-            }
+                
 
         default:
             return state;
