@@ -55,7 +55,7 @@ function Form({ temperamentsE, guardaCreado, idG }){
     async function enviar(e, name, añosMin, añosMax, pesoMin, pesoMax, alturaMin, alturaMax, image, selec){
         e.preventDefault();
         if(!image){
-            image = "https://cdn2.thedogapi.com/images/B1d5me547.jpg";
+            image = "https://media.istockphoto.com/vectors/dog-silhouette-pet-animal-vector-id1257179923?k=20&m=1257179923&s=170667a&w=0&h=zsjUXo2adsZHHD7iysTGU1epH_y8UyQY1VOc7knEF3M=";
         }
         let life_span = `${añosMin} - ${añosMax} years ` ;
         let weight = `${pesoMin} - ${pesoMax}`;

@@ -10,6 +10,16 @@ export function enviaTemperaments(data){
 
 //Carga los temperamentos para luego ser mandados al store
 export function cargaTemperaments(){
+    // return async function (dispatch){
+    //    try{
+    //    var temperaments = await axios.get('http://localhost:3001/temperament')
+    //    temperaments = temperaments.data;
+    //    dispatch(enviaTemperaments(temperaments))
+    //    }catch(error){
+    //        console.log(error)
+    //    }             
+        
+    // }
     return function (dispatch){
         axios.get('http://localhost:3001/temperament')
         .then(temperaments => temperaments.data)
