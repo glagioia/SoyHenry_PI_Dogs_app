@@ -21,7 +21,7 @@ export function cargaTemperaments(){
         
     // }
     return function (dispatch){
-        axios.get('http://localhost:3001/temperament')
+        axios.get('http://137.184.16.155:3001/temperament')
         .then(temperaments => temperaments.data)
         .then(temperaments => dispatch(enviaTemperaments(temperaments)))
         .catch(error => console.log(error));
@@ -57,7 +57,7 @@ export function envioPorNombreRaza(data){
 //filtra por nombre (busca en el servidor)
 export function filtradoNombre(nombre){
     return async function(dispatch){
-        let results = await axios.get(`http://localhost:3001/dogs?name=${nombre}`);
+        let results = await axios.get(`http://137.184.16.155:3001/dogs?name=${nombre}`);
         let resultsData = results.data;
         dispatch(envioPorNombreRaza(resultsData));
     }
@@ -75,7 +75,7 @@ export function temperamentoFiltrado(data){
 export function filtradoTemperamento(temperamento){
     //console.log(temperamento)
     return async function(dispatch){
-        let results = await axios.get(`http://localhost:3001/intermediate/${temperamento}`);
+        let results = await axios.get(`http://137.184.16.155:3001/intermediate/${temperamento}`);
         let resultsData = results.data;
         dispatch(temperamentoFiltrado(resultsData));
     }
@@ -84,7 +84,7 @@ export function filtradoTemperamento(temperamento){
 //Trae todas las razas de perros creadas y existentes desde el servidor
 export function razas(){
     return async function(dispatch){
-        let results = await axios.get('http://localhost:3001/dogs');
+        let results = await axios.get('http://137.184.16.155:3001/dogs');
         let resultsData = results.data;
         dispatch(envioPorNombreRaza(resultsData));
     }
@@ -111,7 +111,7 @@ export function ordenadoAZ(data){
 export function ordenamiento_AZ(){
     console.log("estamos en orden AZ") 
     return async function(dispatch){
-        const results = await axios.get('http://localhost:3001/dogs');
+        const results = await axios.get('http://137.184.16.155:3001/dogs');
         const resultsData = results.data;
         dispatch(ordenadoAZ(resultsData));
     }
@@ -129,7 +129,7 @@ export function ordenadoZA(data){
 export function ordenamiento_ZA(){
     //console.log("estamos en orden ZA")
     return async function(dispatch){
-        const results = await axios.get('http://localhost:3001/dogs');
+        const results = await axios.get('http://137.184.16.155:3001/dogs');
         const resultsData = results.data;
         dispatch(ordenadoZA(resultsData));
     }
@@ -147,7 +147,7 @@ export function ordenaAsc(data){
 export function ordenamiento_Peso_Asc(){
     console.log("Peso ASC")
     return async function(dispatch){
-        const results = await axios.get('http://localhost:3001/dogs');
+        const results = await axios.get('http://137.184.16.155:3001/dogs');
         const resultsData = results.data;
         dispatch(ordenaAsc(resultsData));
     }
@@ -165,7 +165,7 @@ export function ordenaDesc(data){
 export function ordenamiento_Peso_Desc(){
     console.log("Peso DESC")
     return async function(dispatch){
-        const results = await axios.get('http://localhost:3001/dogs');
+        const results = await axios.get('http://137.184.16.155:3001/dogs');
         const resultsData = results.data;
         dispatch(ordenaDesc(resultsData));
     }

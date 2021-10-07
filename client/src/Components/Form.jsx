@@ -69,7 +69,7 @@ function Form({ temperamentsE, guardaCreado, idG }){
             temperaments: selec,
         };
         
-         await axios.post('http://localhost:3001/dog', datos)
+         await axios.post('http://137.184.16.155:3001/dog', datos)
         let datosBG = {
             name,
             life_span,
